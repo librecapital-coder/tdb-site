@@ -7,186 +7,28 @@
   <meta name="description" content="Ayuda a tu hijo a entender fracciones de 4.º grado con una explicación simple para padres, ejercicios progresivos y respuestas explicadas." />
   <style>
     :root{
-      --bg:#f7f8fb;
-      --card:#ffffff;
-      --text:#172033;
-      --muted:#5f6b7a;
-      --primary:#3157d5;
-      --primary-dark:#2444ab;
-      --accent:#f0b84b;
-      --line:#e6e9ef;
-      --success:#247a4f;
-      --shadow:0 12px 30px rgba(23,32,51,.08);
-      --radius:22px;
+      --bg:#f7f8fb;--card:#ffffff;--text:#172033;--muted:#5f6b7a;--primary:#3157d5;--primary-dark:#2444ab;--accent:#f0b84b;--line:#e6e9ef;--success:#247a4f;--shadow:0 12px 30px rgba(23,32,51,.08);--radius:22px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-    header{padding:22px 0}
-    .brand{font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
-    .brand span{color:var(--primary)}
-    .hero{padding:44px 0 28px}
-    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
-    .eyebrow{display:inline-block;background:#e9eeff;color:var(--primary-dark);padding:7px 12px;border-radius:999px;font-weight:700;font-size:.88rem}
-    h1{font-size:clamp(2.15rem,5vw,4.25rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0}
-    .lead{font-size:1.18rem;color:var(--muted);max-width:700px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
-      padding:14px 20px;border-radius:14px;font-weight:800;border:1px solid transparent;
-      transition:.18s ease;
-    }
-    .btn.primary{background:var(--primary);color:#fff}
-    .btn.primary:hover{background:var(--primary-dark)}
-    .btn.secondary{background:#fff;color:var(--text);border-color:var(--line)}
-    .price-note{margin-top:10px;color:var(--muted);font-size:.9rem}
-    .hero-card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
-    .mock{
-      min-height:360px;border-radius:18px;background:linear-gradient(145deg,#eef2ff,#fff8e6);
-      display:flex;align-items:center;justify-content:center;padding:28px;text-align:center
-    }
-    .mock h3{font-size:2rem;margin:0 0 10px;letter-spacing:-.04em}
-    .mock p{margin:0;color:var(--muted)}
-    section{padding:42px 0}
-    h2{font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-.035em;margin:0 0 12px}
-    .section-lead{color:var(--muted);max-width:760px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 6px 18px rgba(23,32,51,.04)}
-    .card strong{display:block;font-size:1.06rem;margin-bottom:7px}
-    .step{font-size:.78rem;font-weight:900;color:var(--primary);text-transform:uppercase;letter-spacing:.08em}
-    .product{
-      background:var(--text);color:#fff;border-radius:28px;padding:34px;display:grid;
-      grid-template-columns:1fr auto;gap:24px;align-items:center
-    }
-    .product p{color:#c9d0dc;margin-bottom:0}
-    .price{font-size:2.6rem;font-weight:900;letter-spacing:-.05em}
-    .mini{font-size:.85rem;color:#b7c0cf}
-    .freebox{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
-    ul{padding-left:20px}
-    footer{padding:38px 0 60px;color:var(--muted);font-size:.9rem}
-    .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:.9rem}
-    .trust span::before{content:"✓";color:var(--success);font-weight:900;margin-right:6px}
-    @media (max-width:800px){
-      .grid,.product,.freebox{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr}
-      .hero{padding-top:20px}
-      .mock{min-height:260px}
-      .product{text-align:left}
-    }
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 20px}header{padding:22px 0}.brand{font-weight:800;font-size:1.05rem;letter-spacing:-.02em}.brand span{color:var(--primary)}
+    .hero{padding:44px 0 28px}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}.eyebrow{display:inline-block;background:#e9eeff;color:var(--primary-dark);padding:7px 12px;border-radius:999px;font-weight:700;font-size:.88rem}
+    h1{font-size:clamp(2.15rem,5vw,4.25rem);line-height:1.02;letter-spacing:-.055em;margin:18px 0}.lead{font-size:1.18rem;color:var(--muted);max-width:700px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:14px 20px;border-radius:14px;font-weight:800;border:1px solid transparent;transition:.18s ease}.btn.primary{background:var(--primary);color:#fff}.btn.primary:hover{background:var(--primary-dark)}.btn.secondary{background:#fff;color:var(--text);border-color:var(--line)}
+    .hero-card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}.mock{min-height:360px;border-radius:18px;background:linear-gradient(145deg,#eef2ff,#fff8e6);display:flex;align-items:center;justify-content:center;padding:28px;text-align:center}.mock h3{font-size:2rem;margin:0 0 10px;letter-spacing:-.04em}.mock p{margin:0;color:var(--muted)}
+    section{padding:42px 0}h2{font-size:clamp(1.7rem,3vw,2.6rem);letter-spacing:-.035em;margin:0 0 12px}.section-lead{color:var(--muted);max-width:760px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 6px 18px rgba(23,32,51,.04)}.card strong{display:block;font-size:1.06rem;margin-bottom:7px}.step{font-size:.78rem;font-weight:900;color:var(--primary);text-transform:uppercase;letter-spacing:.08em}
+    .product{background:var(--text);color:#fff;border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.product p{color:#c9d0dc;margin-bottom:0}.price{font-size:2.6rem;font-weight:900;letter-spacing:-.05em}.mini{font-size:.85rem;color:#b7c0cf}.freebox{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}ul{padding-left:20px}footer{padding:38px 0 60px;color:var(--muted);font-size:.9rem}.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:var(--muted);font-size:.9rem}.trust span::before{content:"✓";color:var(--success);font-weight:900;margin-right:6px}
+    @media (max-width:800px){.grid,.product,.freebox{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero{padding-top:20px}.mock{min-height:260px}.product{text-align:left}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap brand">Tutor de Bolsillo <span>— TDB</span></div>
-  </header>
-
+  <header><div class="wrap brand">Tutor de Bolsillo <span>— TDB</span></div></header>
   <main>
-    <section class="hero">
-      <div class="wrap grid">
-        <div>
-          <div class="eyebrow">Rescate escolar para padres</div>
-          <h1>Explícale las fracciones sin volver a estudiar primaria.</h1>
-          <p class="lead">Una guía rápida para padres + práctica progresiva para que tu hijo entienda qué significa una fracción, cómo reconocer equivalencias y cómo comparar fracciones simples.</p>
-          <div class="actions">
-            <a class="btn primary" href="#gratis">Probar 5 ejercicios gratis</a>
-            <a class="btn secondary" href="#comprar">Ver el kit completo</a>
-          </div>
-          <div class="trust">
-            <span>Para 4.º grado</span>
-            <span>Respuestas explicadas</span>
-            <span>Sin jerga pedagógica</span>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="mock">
-            <div>
-              <h3>Fracciones sin enredos</h3>
-              <p>Explicación para padres + ejercicios + respuestas explicadas</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>Cuando tu hijo se traba, no necesitas una clase de una hora.</h2>
-        <p class="section-lead">Necesitas entender qué decir, comprobar si lo entendió y saber cómo corregir el error más común. Ese es el trabajo de Tutor de Bolsillo.</p>
-
-        <div class="cards">
-          <div class="card">
-            <div class="step">Paso 1</div>
-            <strong>Tú entiendes cómo explicarlo</strong>
-            <div>Una hoja breve te recuerda lo esencial: numerador, denominador, partes iguales y equivalencias.</div>
-          </div>
-          <div class="card">
-            <div class="step">Paso 2</div>
-            <strong>Tu hijo practica</strong>
-            <div>Ejercicios originales organizados de lo visual a lo conceptual, sin saltos innecesarios.</div>
-          </div>
-          <div class="card">
-            <div class="step">Paso 3</div>
-            <strong>Sabes dónde se confundió</strong>
-            <div>Las respuestas no solo dicen “correcto”: explican por qué y cómo volver a enseñarlo si falla.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="gratis">
-      <div class="wrap">
-        <div class="freebox">
-          <div>
-            <h2>Empieza gratis: 5 ejercicios diagnóstico</h2>
-            <p class="section-lead">Úsalos para saber si tu hijo realmente entendió las fracciones o si solo memorizó el procedimiento.</p>
-          </div>
-          <div>
-            <a class="btn primary" href="#" onclick="alert('El enlace de descarga se activará cuando publiquemos el lead magnet.'); return false;">Descargar gratis</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="comprar">
-      <div class="wrap">
-        <div class="product">
-          <div>
-            <h2>Kit de Rescate Escolar: Fracciones 4.º grado</h2>
-            <p>Incluye explicación para padres, ejemplos, 20 ejercicios progresivos, mini evaluación, respuestas explicadas y notas para corregir los errores más frecuentes.</p>
-            <ul>
-              <li>Producto digital descargable</li>
-              <li>Diseñado para usar en casa</li>
-              <li>Entrega automática después del pago</li>
-            </ul>
-          </div>
-          <div>
-            <div class="price">USD 3,99</div>
-            <div class="mini">Precio inicial de prueba</div>
-            <a class="btn primary" style="margin-top:14px;width:100%" href="#" onclick="alert('El checkout se activará cuando configuremos la cuenta de pago.'); return false;">Quiero el kit completo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <h2>¿Por qué no regalar todo?</h2>
-        <p class="section-lead">El contenido gratuito te permite comprobar la calidad. El kit completo te ahorra el trabajo de buscar ejercicios, verificar respuestas y decidir qué explicar cuando tu hijo se equivoca.</p>
-      </div>
-    </section>
+    <section class="hero"><div class="wrap grid"><div><div class="eyebrow">Rescate escolar para padres</div><h1>Explícale las fracciones sin volver a estudiar primaria.</h1><p class="lead">Una guía rápida para padres + práctica progresiva para que tu hijo entienda qué significa una fracción, cómo reconocer equivalencias y cómo comparar fracciones simples.</p><div class="actions"><a class="btn primary" href="diagnostico.html">Probar 5 ejercicios gratis</a><a class="btn secondary" href="#comprar">Ver el kit completo</a></div><div class="trust"><span>Para 4.º grado</span><span>Respuestas explicadas</span><span>Sin jerga pedagógica</span></div></div><div class="hero-card"><div class="mock"><div><h3>Fracciones sin enredos</h3><p>Explicación para padres + ejercicios + respuestas explicadas</p></div></div></div></div></section>
+    <section><div class="wrap"><h2>Cuando tu hijo se traba, no necesitas una clase de una hora.</h2><p class="section-lead">Necesitas entender qué decir, comprobar si lo entendió y saber cómo corregir el error más común. Ese es el trabajo de Tutor de Bolsillo.</p><div class="cards"><div class="card"><div class="step">Paso 1</div><strong>Tú entiendes cómo explicarlo</strong><div>Una hoja breve te recuerda lo esencial: numerador, denominador, partes iguales y equivalencias.</div></div><div class="card"><div class="step">Paso 2</div><strong>Tu hijo practica</strong><div>Ejercicios originales organizados de lo visual a lo conceptual, sin saltos innecesarios.</div></div><div class="card"><div class="step">Paso 3</div><strong>Sabes dónde se confundió</strong><div>Las respuestas no solo dicen “correcto”: explican por qué y cómo volver a enseñarlo si falla.</div></div></div></div></section>
+    <section id="gratis"><div class="wrap"><div class="freebox"><div><h2>Empieza gratis: 5 ejercicios diagnóstico</h2><p class="section-lead">Úsalos para saber si tu hijo realmente entendió las fracciones o si solo memorizó el procedimiento. Puedes imprimirlos o guardarlos como PDF.</p></div><div><a class="btn primary" href="diagnostico.html">Abrir diagnóstico gratis</a></div></div></div></section>
+    <section id="comprar"><div class="wrap"><div class="product"><div><h2>Kit de Rescate Escolar: Fracciones 4.º grado</h2><p>Incluye explicación para padres, ejemplos, 20 ejercicios progresivos, mini evaluación, respuestas explicadas y notas para corregir los errores más frecuentes.</p><ul><li>Producto digital descargable</li><li>Diseñado para usar en casa</li><li>Entrega automática después del pago</li></ul></div><div><div class="price">USD 3,99</div><div class="mini">Precio inicial de prueba</div><a class="btn primary" style="margin-top:14px;width:100%" href="#" onclick="alert('El checkout se activará en el siguiente paso.'); return false;">Quiero el kit completo</a></div></div></div></section>
+    <section><div class="wrap"><h2>¿Por qué no regalar todo?</h2><p class="section-lead">El contenido gratuito te permite comprobar la calidad. El kit completo te ahorra el trabajo de buscar ejercicios, verificar respuestas y decidir qué explicar cuando tu hijo se equivoca.</p></div></section>
   </main>
-
-  <footer>
-    <div class="wrap">
-      Tutor de Bolsillo — Material educativo de apoyo para padres y cuidadores. No sustituye la enseñanza escolar ni requiere recopilar datos personales de niños.
-    </div>
-  </footer>
+  <footer><div class="wrap">Tutor de Bolsillo — Material educativo de apoyo para padres y cuidadores. No sustituye la enseñanza escolar ni requiere recopilar datos personales de niños.</div></footer>
 </body>
 </html>
