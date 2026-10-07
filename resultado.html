@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Resultado del diagnóstico | Tutor de Bolsillo</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--text:#172033;--muted:#5f6b7a;--primary:#3157d5;--line:#e6e9ef;--ok:#247a4f;--warn:#9a6700;--danger:#a33a35}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+    .wrap{max-width:760px;margin:0 auto;padding:24px 18px 60px}.brand{font-weight:850;margin-bottom:24px}.brand span{color:var(--primary)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 10px 30px rgba(23,32,51,.06)}
+    .score{font-size:4rem;font-weight:950;letter-spacing:-.06em;line-height:1;margin:8px 0}.tag{display:inline-block;padding:7px 11px;border-radius:999px;font-size:.84rem;font-weight:850;background:#e9eeff;color:#2444ab}
+    h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.05;letter-spacing:-.05em;margin:14px 0}.lead{font-size:1.08rem;color:var(--muted)}
+    .insight{margin:22px 0;padding:18px;border-radius:16px;background:#f4f6fb}.insight strong{display:block;margin-bottom:7px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:14px 20px;border-radius:14px;font-weight:850}.primary{background:var(--primary);color:#fff}.secondary{background:#fff;color:var(--text);border:1px solid var(--line);margin-left:8px}
+    .buy{margin-top:24px;background:#172033;color:#fff;border-radius:22px;padding:24px}.buy p{color:#c9d0dc}.buy .btn{background:#fff;color:#172033}
+    .micro{font-size:.86rem;color:var(--muted);margin-top:18px}
+    @media(max-width:520px){.card{padding:22px}.btn{width:100%;margin:8px 0 0}.secondary{margin-left:0}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">Tutor de Bolsillo <span>— TDB</span></div>
+  <section class="card">
+    <span class="tag">Resultado inmediato</span>
+    <div id="score" class="score">—/5</div>
+    <h1 id="headline">Analizando resultado…</h1>
+    <p id="lead" class="lead"></p>
+    <div id="insight" class="insight"></div>
+    <div>
+      <a class="btn primary" href="diagnostico.html?src=resultado-retry">Repetir diagnóstico</a>
+      <a class="btn secondary" href="index.html?src=resultado-home">Ver explicación</a>
+    </div>
+    <section class="buy">
+      <h2 id="buyTitle" style="margin-top:0">Siguiente paso recomendado</h2>
+      <p id="buyText"></p>
+      <a id="buyBtn" class="btn" href="comprar.html?src=diagnostico-result">Ver Kit Fracciones 4.º — USD 3,99</a>
+    </section>
+    <p class="micro">El diagnóstico es orientativo y está diseñado para detectar conceptos que conviene reforzar en casa.</p>
+  </section>
+</main>
+<img src="https://tracker.metricool.com/c3po.jpg?hash=2b4624e422f287e540591a1283849bf" width="1" height="1" alt="" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px" />
+<script>
+(function(){
+  const p=new URLSearchParams(location.search);
+  const score=Math.max(0,Math.min(5,parseInt(p.get('score')||'0',10)));
+  const misses=(p.get('misses')||'').split('-').filter(Boolean).map(Number);
+  const src=(p.get('src')||'diagnostico').replace(/[^a-zA-Z0-9_-]/g,'').slice(0,80);
+  const names={1:'representación de fracciones',2:'qué significa el denominador',3:'fracciones equivalentes',4:'comparación de fracciones',5:'partes iguales'};
+  document.getElementById('score').textContent=score+'/5';
+  let headline,lead,buyText;
+  if(score<=2){
+    headline='Hay una base que conviene reforzar.';
+    lead='No hace falta empezar de cero, pero sí ordenar los conceptos antes de seguir con ejercicios más difíciles.';
+    buyText='El kit trabaja estos conceptos en orden, con explicación para el adulto, práctica progresiva y respuestas explicadas.';
+  } else if(score<=4){
+    headline='Está cerca, pero hay una confusión concreta.';
+    lead='Eso es una buena señal: no necesita más teoría general, sino corregir el punto exacto donde se está equivocando.';
+    buyText='El kit sirve para practicar justo ese tipo de error y comprobar que ya quedó entendido.';
+  } else {
+    headline='La base está bien entendida.';
+    lead='Acertó las cinco preguntas. El siguiente paso es practicar comparaciones y equivalencias con más variedad.';
+    buyText='Si quieres consolidarlo, el kit añade 20 ejercicios progresivos y una mini evaluación.';
+  }
+  document.getElementById('headline').textContent=headline;
+  document.getElementById('lead').textContent=lead;
+  const insight=document.getElementById('insight');
+  if(misses.length){
+    const labels=misses.map(n=>names[n]).filter(Boolean);
+    insight.innerHTML='<strong>Conviene revisar:</strong>'+labels.join(', ')+'.';
+  } else {
+    insight.innerHTML='<strong>Fortaleza detectada:</strong> respondió correctamente representación, denominador, equivalencias, comparación y partes iguales.';
+  }
+  const buy=document.getElementById('buyBtn');
+  buy.href='comprar.html?src=diagnostico-result-'+score+'&from='+encodeURIComponent(src);
+})();
+</script>
+</body>
+</html>
